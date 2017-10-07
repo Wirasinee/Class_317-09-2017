@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context="com.example.class_317_09_2017.MainActivity">
+    <!--160dp = 1 นิ้ว -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please enter you e-mail" />
+    <!--***ลอง layout_weight 1 กับเปลียน height=0-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/email_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="textEmailAddress" />
+        <!--hint คือตัวแนะนำ่าควรใส่ไร
+        layout_weight : กำหนดนนให้กับวิว(สคิดเป็นัดส่วน) ข้อดีเข้ากับทุกขนาดจอ layout_widthควรเป็น0
+        inputType : ชนิดค่าที่รับเข้ามา
+        -->
+        <Button
+            android:id="@+id/ok_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK" />
+    </LinearLayout>
+    <!--LL เป็นแนวนอน weight จะมีผลกับความกวาง
+            LL เป็นแนวตั้ง weight จะมีผลกับความสูง
+         -->
+    <Button
+        android:id="@+id/exit_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Exit" />
+
+
+
+</LinearLayout>
